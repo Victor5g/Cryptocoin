@@ -28,7 +28,10 @@
     "yarn": "^1.22.19"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.9"
+    "@babel/core": "^7.12.9",
+    "@types/react": "~18.0.0",
+    "@types/react-native": "~0.69.1",
+    "typescript": "^4.6.3"
   },
   "private": true
 }
