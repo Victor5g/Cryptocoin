@@ -17,7 +17,7 @@ import TransactionHistory from "../components/TransactionHistory";
 
 import { DummyData, COLORS, SIZES, FONTS, Icons, Images } from "../constants";
 
-const RenderHeader = ({data, trending, RenderItem, navigate }) => {
+const RenderHeader = ({ data, trending, RenderItem, navigate }) => {
   return (
     <View style={{ width: "100%", height: 290, ...styles.shadow }}>
       <ImageBackground
@@ -85,7 +85,11 @@ const RenderHeader = ({data, trending, RenderItem, navigate }) => {
             contentContainerStyle={{ marginTop: SIZES.base }}
             data={trending}
             renderItem={({ index, item }) => (
-              <RenderItem index={index} item={item} pressItem={()=>navigate("CryptoDetail",{currency:item})} />
+              <RenderItem
+                index={index}
+                item={item}
+                pressItem={() => navigate("CryptoDetail", { currency: item })}
+              />
             )}
             keyExtractor={(item) => `${item.id}`}
             horizontal
@@ -189,7 +193,7 @@ const RenderNotice = () => {
   );
 };
 
-const RenderTransactionHistory = ({transactionHistory}) => {
+const RenderTransactionHistory = ({ transactionHistory }) => {
   return (
     <TransactionHistory
       customContainerStyle={{ ...styles.shadow }}
@@ -201,7 +205,9 @@ const RenderTransactionHistory = ({transactionHistory}) => {
 const Home = () => {
   const { navigate } = useNavigation();
   const [trending, setTrending] = useState(DummyData.trendingCurrencies);
-  const [transactionHistory, setTransactionHistory] = useState(DummyData.transactionHistory);
+  const [transactionHistory, setTransactionHistory] = useState(
+    DummyData.transactionHistory
+  );
 
   useEffect(() => {
     LogBox.ignoreLogs(["VirtualizedLists should never be nested"]);
@@ -244,4 +250,3 @@ const styles = StyleSheet.create({
 });
 
 export default Home;
-
