@@ -1,6 +1,8 @@
-import { CryptoDetail, Transaction } from "../screens";
 import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer } from "@react-navigation/native";
+
+import CryptoDetail from "../screens/CryptoDetail";
+import Transaction from "../screens/Transaction";
 
 import Tabs from "./app.tab.routes";
 

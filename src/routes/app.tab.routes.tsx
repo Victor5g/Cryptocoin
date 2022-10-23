@@ -4,10 +4,9 @@ import TabIcon from "../components/TabIcon";
 import Icon from "../components/Icon";
 import ButtonTab from "../components/ButtonTab";
 
-import { COLORS } from "../constants";
-import { Icons } from "../constants";
+import { COLORS, Icons } from "../constants";
 
-import { Home } from "../screens";
+import Home from "../screens/Home";
 
 const { Navigator, Screen } = createBottomTabNavigator();
 
