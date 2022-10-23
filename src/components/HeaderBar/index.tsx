@@ -1,35 +1,36 @@
-import React from 'react'
+import React from "react";
 
-import { 
-  View,
-  Text,
-  TouchableOpacity,
-  Image
- } from 'react-native' 
+import { View, Text, TouchableOpacity, Image } from "react-native";
+import styles from "./styles";
 
- import {COLORS, SIZES, FONTS, Icons} from "../../constants";
+import { Icons } from "../../constants";
 
- const HeaderBar = ({right, onPress}) => {
-    return (
-      <View style={{paddingHorizontal:SIZES.padding, flexDirection:'row'}}>
-        <View style={{flex:1, alignItems:'flex-start'}}>
-          <TouchableOpacity style={{flexDirection:'row', alignItems:'center'}} onPress={onPress}>
-            <Image source={Icons.back_arrow} resizeMode="contain" style={{width:25, height:25, tintColor:COLORS.gray}}/>
-            <Text style={{marginLeft:SIZES.base, ...FONTS.h2}} >Back</Text>
-          </TouchableOpacity>
-        </View>
-        {right &&
-        <View style={{flex:1, alignItems:'flex-end'}}>
+const HeaderBar = ({ right, onPress }) => {
+  return (
+    <View style={styles.container}>
+      <View style={styles.areaButtonBack}>
+        <TouchableOpacity style={styles.buttonBack} onPress={onPress}>
+          <Image
+            source={Icons.back_arrow}
+            resizeMode="contain"
+            style={styles.iconBack}
+          />
+          <Text style={styles.labelButton}>Back</Text>
+        </TouchableOpacity>
+      </View>
+      {right && (
+        <View style={styles.buttonStar}>
           <TouchableOpacity>
-            <Image source={Icons.star} resizeMode="contain" style={{width:30, height:30}}
+            <Image
+              source={Icons.star}
+              resizeMode="contain"
+              style={styles.iconStar}
             />
           </TouchableOpacity>
-
         </View>
-        }
-      </View>
+      )}
+    </View>
+  );
+};
 
-    )
- }
-
- export default HeaderBar;
+export default HeaderBar;

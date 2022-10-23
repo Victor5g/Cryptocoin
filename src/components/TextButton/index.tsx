@@ -1,8 +1,7 @@
 import React from "react";
-
 import { Text, TouchableOpacity } from "react-native";
 
-import { COLORS, SIZES, FONTS } from "../../constants";
+import styles from "./styles";
 
 const TextButton = ({
   label,
@@ -12,17 +11,10 @@ const TextButton = ({
 }) => {
   return (
     <TouchableOpacity
-      style={{
-        height: 40,
-        alignItems: "center",
-        justifyContent: "center",
-        borderRadius: SIZES.radius,
-        backgroundColor: COLORS.green,
-        ...customContainerStyle,
-      }}
+      style={{ ...styles.container, ...customContainerStyle }}
       onPress={onPress}
     >
-      <Text style={{ color: COLORS.white, ...FONTS.h3, ...customLabelStyle }}>
+      <Text style={{ ...styles.labelButton, ...customLabelStyle }}>
         {label}
       </Text>
     </TouchableOpacity>

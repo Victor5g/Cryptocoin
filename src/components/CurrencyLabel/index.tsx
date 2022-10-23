@@ -1,22 +1,18 @@
 import React from "react";
-import { 
-  View,
-  Image,
-  Text
- } from "react-native";
+import { View, Image, Text } from "react-native";
 
-import { COLORS, SIZES, FONTS } from "../../constants";
+import styles from "./styles";
 
-const CurrencyLabel = ({icon, currency, code}) => {
-  return(
-    <View style={{flexDirection:'row'}}>
-      <Image source={icon} resizeMode="cover" style={{width:25,height:25, marginTop:5}} />
-      <View style={{marginLeft:SIZES.base}}>
-        <Text style={{...FONTS.h3}}>{currency}</Text>
-        <Text style={{color:COLORS.gray, ...FONTS.body4}} >{code}</Text>
+const CurrencyLabel = ({ icon, currency, code }) => {
+  return (
+    <View style={styles.container}>
+      <Image source={icon} resizeMode="cover" style={styles.imageArea} />
+      <View style={styles.boxText}>
+        <Text style={styles.textCurrency}>{currency}</Text>
+        <Text style={styles.textCode}>{code}</Text>
       </View>
     </View>
-  )
-}
+  );
+};
 
 export default CurrencyLabel;
