@@ -10,8 +10,14 @@ import {
 import styles from "./styles";
 
 import { Icons, Images } from "../../constants";
+import { HeaderInfoType } from "./types";
 
-const HeaderInfo = ({ data, trending, RenderItem, navigate }) => {
+const HeaderInfo = ({
+  data,
+  trending,
+  RenderItem,
+  navigate,
+}: HeaderInfoType) => {
   return (
     <View style={{ ...styles.container, ...styles.shadow }}>
       <ImageBackground

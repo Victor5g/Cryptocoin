@@ -14,10 +14,20 @@ import Dots from "../Dots";
 
 import styles from "./styles";
 
+import { ChartType } from "./types";
+
 import { DummyData, COLORS, SIZES, FONTS } from "../../constants";
 import { VictoryCustomTheme } from "../../styles";
 
-const Chart = ({ icon, currency, code, amount, changes, type, chartData }) => {
+const Chart = ({
+  icon,
+  currency,
+  code,
+  amount,
+  changes,
+  type,
+  chartData,
+}: ChartType) => {
   const scrollX = new Animated.Value(0);
   const numberOfCharts = [1, 2, 3];
   const [chartOptions, setChartOprions] = useState(DummyData.chartOptions);

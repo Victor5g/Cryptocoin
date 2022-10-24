@@ -1,10 +1,11 @@
 import { View, Animated } from "react-native";
 
 import styles from "./styles";
+import { DotsType } from "./types";
 
 import { COLORS, SIZES } from "../../constants";
 
-const Dots = ({ numberOfCharts, scrollX }) => {
+const Dots = ({ numberOfCharts, scrollX }: DotsType) => {
   const dotPosition = Animated.divide(scrollX, SIZES.width);
 
   return (

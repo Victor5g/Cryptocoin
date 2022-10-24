@@ -1,8 +1,9 @@
 import { View, Text, TouchableOpacity } from "react-native";
 
 import styles from "./styles";
+import { NewType } from "./types";
 
-const News = ({ title, description }) => {
+const News = ({ title, description }: NewType) => {
   return (
     <View style={{ ...styles.container, ...styles.shadow }}>
       <Text style={styles.titleNew}>{title}</Text>

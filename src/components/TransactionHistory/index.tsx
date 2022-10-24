@@ -1,9 +1,14 @@
 import { View, Text, FlatList } from "react-native";
 
 import styles from "./styles";
+import { TransactionType } from "./types";
+
 import RenderItem from "./render";
 
-const TransactionHistory = ({ customContainerStyle, history }) => {
+const TransactionHistory = ({
+  customContainerStyle,
+  history,
+}: TransactionType) => {
   return (
     <View style={{ ...styles.containerTrasaction, ...customContainerStyle }}>
       <Text style={styles.transactionTitle}>Transaction History</Text>

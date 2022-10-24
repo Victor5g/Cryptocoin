@@ -4,7 +4,9 @@ import styles from "./styles";
 import CurrencyLabel from "../CurrencyLabel";
 import TextButton from "../TextButton";
 
-const Buy = ({ icon, currency, code, value, crypto, onPress, icon_action }) => {
+import { BuyType } from "./types";
+
+const Buy = ({ icon, currency, code, value, crypto, onPress, icon_action }:BuyType) => {
   return (
     <View style={{ ...styles.container, ...styles.shadow }}>
       <View style={styles.content}>

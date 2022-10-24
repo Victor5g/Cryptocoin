@@ -1,11 +1,12 @@
 import { View, Text } from "react-native";
 
 import styles from "./style";
+import { Tradeype } from "./types";
 
 import CurrencyLabel from "../../components/CurrencyLabel";
 import TextButton from "../../components/TextButton";
 
-const Trade = ({ icon, currency, value, code, crypto, onPress }) => {
+const Trade = ({ icon, currency, value, code, crypto, onPress }: Tradeype) => {
   return (
     <View style={{ ...styles.container, ...styles.shadow }}>
       <CurrencyLabel icon={icon} currency={currency} code={code} />

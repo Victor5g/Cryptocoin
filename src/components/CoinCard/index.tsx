@@ -4,7 +4,9 @@ import styles from "./styles";
 
 import { SIZES } from "../../constants";
 
-const CoinCard = ({ item, index, pressItem }) => {
+import { CoinCardType } from "./types";
+
+const CoinCard = ({ item, index, pressItem }: CoinCardType) => {
   return (
     <TouchableOpacity
       onPress={pressItem}

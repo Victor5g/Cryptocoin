@@ -1,14 +1,9 @@
-import { View, Image, ImageSourcePropType, Text } from "react-native";
+import { View, Image, Text } from "react-native";
 
 import styles from "./styles";
+import { TabIconType } from "./types";
 
-interface PropTabIcon {
-  focused?: Boolean;
-  label: String;
-  icon: ImageSourcePropType;
-}
-
-const TabIcon = ({ focused, label, icon }: PropTabIcon) => {
+const TabIcon = ({ focused, label, icon }: TabIconType) => {
   return (
     <View style={styles.container}>
       <Image

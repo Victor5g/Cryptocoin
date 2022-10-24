@@ -2,10 +2,11 @@ import React from "react";
 
 import { View, Text, TouchableOpacity, Image } from "react-native";
 import styles from "./styles";
+import { HeaderBarType } from "./types";
 
 import { Icons } from "../../constants";
 
-const HeaderBar = ({ right, onPress }) => {
+const HeaderBar = ({ right, onPress }: HeaderBarType) => {
   return (
     <View style={styles.container}>
       <View style={styles.areaButtonBack}>

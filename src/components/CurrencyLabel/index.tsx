@@ -2,8 +2,9 @@ import React from "react";
 import { View, Image, Text } from "react-native";
 
 import styles from "./styles";
+import { CurrencyLabelType } from "./types";
 
-const CurrencyLabel = ({ icon, currency, code }) => {
+const CurrencyLabel = ({ icon, currency, code }: CurrencyLabelType) => {
   return (
     <View style={styles.container}>
       <Image source={icon} resizeMode="cover" style={styles.imageArea} />

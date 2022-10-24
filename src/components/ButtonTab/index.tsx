@@ -1,10 +1,12 @@
 import { LinearGradient } from "expo-linear-gradient";
 import { TouchableOpacity } from "react-native";
+
 import styles from "./styles";
+import { ButtonTabType } from "./types";
 
 import { COLORS } from "../../constants";
 
-const ButtonTab = ({ children, onPress }: any) => {
+const ButtonTab = ({ children, onPress }: ButtonTabType) => {
   return (
     <TouchableOpacity style={styles.container} onPress={onPress}>
       <LinearGradient
