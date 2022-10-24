@@ -1,6 +1,4 @@
-import { StyleSheetProperties } from "react-native";
-
 export type TransactionType = {
-  customContainerStyle: StyleSheetProperties;
+  customContainerStyle: any;
   history: Array<Object>;
 };

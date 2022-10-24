@@ -9,9 +9,10 @@ import HeaderBar from "../../components/HeaderBar";
 import Trade from "../../components/Trade";
 
 import { SIZES } from "../../constants";
+import { TransactionType } from "./types";
 
 const Transaction = ({ route }) => {
-  const [selectedCurrency, setSelectedCurrency] = useState();
+  const [selectedCurrency, setSelectedCurrency] = useState<TransactionType>();
   const { navigate } = useNavigation();
 
   useEffect(() => {

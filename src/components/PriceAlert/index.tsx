@@ -1,15 +1,10 @@
-import { 
-  View, 
-  Text, 
-  TouchableOpacity, 
-  Image 
-} from "react-native";
+import { View, Text, TouchableOpacity, Image } from "react-native";
 
 import styles from "./styles";
 
 import { Icons } from "../../constants";
 
-const PriceAlert = ({ customContainerStyle }) => {
+const PriceAlert = ({ customContainerStyle }: any) => {
   return (
     <TouchableOpacity
       style={{ ...styles.container, ...customContainerStyle, ...styles.shadow }}

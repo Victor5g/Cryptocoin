@@ -42,7 +42,7 @@ const Home = () => {
           description={`It's very difficult to time an investments, especially when ther market is colatile. Learn how to use dollar cost averaging to your advantage.`}
         />
         <TransactionHistory
-          customContainerStyle={{ ...styles.shadow }}
+          customContainerStyle={styles.shadow}
           history={transactionHistory}
         />
       </View>
