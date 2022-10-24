@@ -1,4 +1,4 @@
-
+import React from "react";
 import Routes from "./routes/app.routes";
 import { useFonts } from "expo-font";
 import FONTS from './constants/fonts'
