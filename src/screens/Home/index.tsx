@@ -1,10 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigation } from "@react-navigation/native";
-import {
-  View,
-  ScrollView,
-  LogBox, //Monitoring
-} from "react-native";
+import { View, ScrollView, StatusBar } from "react-native";
 
 import styles from "./styles";
 
@@ -23,13 +19,14 @@ const Home = () => {
     DummyData.transactionHistory
   );
 
-  useEffect(() => {
-    LogBox.ignoreLogs(["VirtualizedLists should never be nested"]);
-  });
-
   return (
-    <ScrollView>
+    <ScrollView bounces={false}>
       <View style={styles.container}>
+        <StatusBar
+          barStyle="light-content"
+          backgroundColor="transparent"
+          translucent
+        />
         <HeaderInfo
           data={DummyData}
           trending={trending}

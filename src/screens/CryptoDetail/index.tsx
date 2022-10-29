@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { View, SafeAreaView, ScrollView } from "react-native";
+import { View, SafeAreaView, ScrollView, StatusBar } from "react-native";
 
 import { useNavigation } from "@react-navigation/native";
 
@@ -24,6 +24,11 @@ const CryptoDetail = ({ route }) => {
 
   return (
     <SafeAreaView style={styles.container}>
+      <StatusBar
+        barStyle="dark-content"
+        backgroundColor="transparent"
+        translucent
+      />
       <HeaderBar right={true} onPress={() => navigate("HomeTab")} />
       <ScrollView>
         <View style={{ flex: 1, paddingBottom: SIZES.padding }}>

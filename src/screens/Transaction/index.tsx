@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigation } from "@react-navigation/native";
-import { View, SafeAreaView, ScrollView } from "react-native";
+import { View, SafeAreaView, ScrollView, StatusBar } from "react-native";
 
 import styles from "./styles";
 
@@ -21,7 +21,12 @@ const Transaction = ({ route }) => {
   });
 
   return (
-    <SafeAreaView style={{ flex: 1 }}>
+    <SafeAreaView style={styles.container}>
+      <StatusBar
+        barStyle="dark-content"
+        backgroundColor="transparent"
+        translucent
+      />
       <HeaderBar right={false} onPress={() => navigate("CryptoDetail")} />
       <ScrollView>
         <View style={{ flex: 1, paddingBottom: SIZES.padding }}>

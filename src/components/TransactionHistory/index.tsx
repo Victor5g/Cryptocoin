@@ -1,5 +1,5 @@
-import React from "react";
-import { View, Text, FlatList } from "react-native";
+import React, { Fragment } from "react";
+import { View, Text, FlatList, ScrollView } from "react-native";
 
 import styles from "./styles";
 import { TransactionType } from "./types";
@@ -13,17 +13,14 @@ const TransactionHistory = ({
   return (
     <View style={{ ...styles.containerTrasaction, ...customContainerStyle }}>
       <Text style={styles.transactionTitle}>Transaction History</Text>
-      <FlatList
-        contentContainerStyle={styles.containerList}
-        scrollEnabled={true}
-        data={history}
-        keyExtractor={(item) => `${item.id}`}
-        renderItem={RenderItem}
-        showsVerticalScrollIndicator={false}
-        ItemSeparatorComponent={() => {
-          return <View style={styles.separator} />;
-        }}
-      />
+      <ScrollView contentContainerStyle={styles.containerList}>
+        {history?.map((item, index) => (
+          <Fragment key={index}>
+            <RenderItem item={item} />
+            {index !== history.length - 1 && <View style={styles.separator} />}
+          </Fragment>
+        ))}
+      </ScrollView>
     </View>
   );
 };
