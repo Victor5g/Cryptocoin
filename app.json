@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "crypto-currency",
-    "slug": "crypto-currency",
+    "name": "Cryptocon",
+    "slug": "Cryptocon",
     "version": "1.0.0",
     "assetBundlePatterns": [
       "**/*"
