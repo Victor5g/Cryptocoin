@@ -3,7 +3,7 @@
   
 </p>
 
-<h1 align="center">Cryptocon</h1>
+<h1 align="center">Cryptocoin</h1>
 
 <p align="center">
      <img alt="License" src="https://img.shields.io/static/v1?label=React-Native&message=0.69.5&color=202020&labelColor=008CCD">

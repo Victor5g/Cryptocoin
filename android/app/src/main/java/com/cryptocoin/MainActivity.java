@@ -1,4 +1,4 @@
-package com.cryptocurrency;
+package com.cryptocoin;
 
 import android.os.Build;
 import android.os.Bundle;

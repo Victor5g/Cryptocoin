@@ -1,4 +1,4 @@
-package com.cryptocurrency.newarchitecture;
+package com.cryptocoin.newarchitecture;
 
 import android.app.Application;
 import androidx.annotation.NonNull;
@@ -20,9 +20,9 @@ import com.facebook.react.fabric.EmptyReactNativeConfig;
 import com.facebook.react.fabric.FabricJSIModuleProvider;
 import com.facebook.react.fabric.ReactNativeConfig;
 import com.facebook.react.uimanager.ViewManagerRegistry;
-import com.cryptocurrency.BuildConfig;
-import com.cryptocurrency.newarchitecture.components.MainComponentsRegistry;
-import com.cryptocurrency.newarchitecture.modules.MainApplicationTurboModuleManagerDelegate;
+import com.cryptocoin.BuildConfig;
+import com.cryptocoin.newarchitecture.components.MainComponentsRegistry;
+import com.cryptocoin.newarchitecture.modules.MainApplicationTurboModuleManagerDelegate;
 import java.util.ArrayList;
 import java.util.List;
 
