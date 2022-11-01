@@ -19,9 +19,9 @@
  💶 Mobile app UI of a wallet for selling and buying cryptocurrencies 💼
 
 ## 🖼 GIF 
-<p align="center">  
-
-
+<p align="center">
+  <img src='https://user-images.githubusercontent.com/51713169/199356215-7b8ff00a-e15e-4af9-9dae-bd866b64e8dd.gif' width='330' />
+  <img src='https://user-images.githubusercontent.com/51713169/199358237-e6dff5e7-4d8d-4d1a-981f-bed538703a17.gif' width='315' />
 </p>
 
 ## ✨ Technologies 
